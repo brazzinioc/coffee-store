@@ -1,0 +1,20 @@
+@use './../settings/colors';
+
+
+//ADS carousel
+#advertisements {
+	height: 100%!important;
+	height: 30rem;
+	& > .glider-track {
+		height: 100%;
+	}
+}
+
+
+.glider-dot.active {
+	background-color: var(--color-tertiary)!important;
+}
+
+.c-carousel-element-sm {
+		width: auto!important;
+}

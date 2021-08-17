@@ -1,0 +1,17 @@
+@use './../settings/text';
+@use './../settings/colors';
+
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+}
+
+
+body {
+	font-family: var(--font-poppins), var(--font-sans-serif), var(--font-serif);
+	font-size: var(--font-size-base);
+	color: var(--white);
+	min-width: 20rem;
+	margin: 0;
+	background-color: var(--color-base);
+}

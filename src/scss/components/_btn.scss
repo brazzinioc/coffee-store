@@ -1,0 +1,167 @@
+@use './../settings/colors';
+@import './../tools/mixins';
+@import './../tools/flexbox';
+
+
+
+//Advertisement top buttons
+.c-btn-carousel-adv-prev,
+.c-btn-carousel-adv-next {
+		top: 45%;
+		position: absolute;
+		display: none;
+		background-color: var(--color-tertiary);
+		z-index: 9;
+		padding: .3rem;
+		cursor: pointer;
+	
+		svg[class] {
+			width: 2rem;
+			height: 2rem;
+			display: block;
+		}
+
+}
+
+.c-btn-carousel-adv-prev {
+	margin-left: 1rem;
+	left: 0;
+}
+
+.c-btn-carousel-adv-next {
+	right: 0;
+	margin-right: 1rem;
+}
+
+@include tablet {
+
+	.c-btn-carousel-adv-prev,
+	.c-btn-carousel-adv-next {
+		display: block;
+	}
+
+}
+
+@include computer {
+
+	.c-btn-carousel-adv-prev {
+		margin-left: 2rem;
+	}
+
+	.c-btn-carousel-adv-next {
+		margin-right: 2rem;
+	}
+}
+
+
+
+
+//Featured product buttons | Large
+.c-btn-carousel-fp-prev-lg,
+.c-btn-carousel-fp-next-lg {
+	background-color: var(--white);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	color: black;
+	height: 2.5rem;
+	width: 2.5rem;
+	display: inline-block;
+	padding: 0 .4rem;
+	
+	& > svg[class]{ 
+		display: block;
+		margin: 0 auto;
+	}
+
+	&:hover {
+		background-color: var(--color-tertiary);
+	}
+}
+
+
+
+//Buy Controls Buttons
+.c-btn-buy-control {
+	display: none;
+	padding: 1rem;
+	background: var(--color-tertiary);
+	text-align: center;
+	border-radius: 5px;
+
+	svg[class] {
+		display: block;
+		margin: 0 auto;
+		width: .8rem;
+		height: .8rem;
+		color: black;
+	}
+}
+
+
+
+
+
+
+
+
+//Call to action button
+.c-btn-ca {
+	background: var(--color-tertiary);
+	font-size: .8rem;
+	padding: .6rem .6rem;
+	color: var(--black);
+	text-transform: uppercase;
+	font-weight: 400;
+	cursor: pointer;
+	z-index: 10;
+	height: 2.8rem;
+	
+	&:hover {
+		color: var(--white);
+	}
+}
+
+
+@include tablet {
+	.c-btn-ca {
+		font-size: .9rem;
+		padding: .9rem .9rem;
+	}
+}
+
+
+//Call to action button link
+.c-btn-link-ca {
+	text-transform: uppercase;
+	font-size: .8rem;
+	font-weight: bold;
+	text-decoration: underline;
+
+	&:hover {
+		color: var(--color-tertiary);
+	}
+}
+
+@include computer {
+	.c-btn-link-ca {
+		font-size: 1rem;
+	}
+}
+
+
+//social media
+.c-social-media {
+	display: block;
+	height: 1.9rem;
+	width: 1.9rem;
+	border-radius: 50%;
+	@include flex(row, center, center);
+
+	svg[class] {
+		width: .8rem;
+		height: .8rem;
+	}
+
+	&:hover {
+		background: var(--color-tertiary);
+	}
+}

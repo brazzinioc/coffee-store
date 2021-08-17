@@ -1,0 +1,6 @@
+@use './../settings/colors';
+//@import './../tools/mixins';
+
+header {
+	background-color: var(--color-primary);
+}

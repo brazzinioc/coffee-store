@@ -1,0 +1,116 @@
+@import './../tools/mixins';
+@import './../tools/flexbox';
+
+.c-carousel {
+	height: inherit;
+}
+
+.c-carousel-container {
+	height: inherit;
+	position: relative;
+}
+
+
+//Advertisements top
+.c-carousel-adv-element {
+
+	position: relative;
+	@include flex(column, center, center);
+	@include bg-image-cover('https://images.unsplash.com/photo-1495667796562-1ed6c04ccb8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+	text-align: center;
+	padding: 0 2rem;
+	height: inherit;
+
+	p {
+		margin-bottom: 1rem;
+		z-index: 10;
+		font-size: 1.2rem;
+
+		&:last-of-type {
+			font-weight: 600;
+		}
+	}
+
+	&::after {
+		@include bg-color-after(4, 4, 4, 0.7);
+		@include centered;
+	}
+}
+
+.c-carousel-adv-indicator {
+	position: absolute;
+	@include flex(row, center, center);
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+
+@include tablet {
+
+	.c-carousel-adv-element {
+		p {
+			font-size: 1.8rem;
+		}
+	}
+
+	.c-carousel-adv-indicator {
+		display: none;
+	}
+
+}
+
+
+
+
+//Featured products
+.c-carousel-fpr-element {
+	position: relative;
+	padding: .4rem;
+	margin-right: 1rem;
+
+	h4 {
+		cursor: pointer;
+		color: var(--black);
+		font-size: .8rem;
+		font-weight: 500;
+
+		&:hover {
+			color: var(--color-tertiary);
+		}
+	}
+}
+
+@include tablet {
+
+	.c-carousel-fpr-element {
+		h4 {
+			font-size: 1.1rem;
+		}
+	}
+
+}
+
+@include computer {
+
+	.c-carousel-fpr-element {
+		h4 {
+			font-size: 1.3rem;
+		}
+	}
+
+}
+
+
+
+//Testimonials
+.carousel-list-testimonial {
+	@include bg-image-cover('https://images.unsplash.com/photo-1498653893439-4a6b2ed3b9ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+	overflow: hidden;
+}
+
+.c-carousel-indicator-testimonial {
+	display: relative;
+	background: rgba(0, 0, 0, 1);
+	@include flex(row, center, center);
+}

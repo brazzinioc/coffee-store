@@ -1,0 +1,53 @@
+@use './../settings/colors';
+
+.txt-align-right {
+	text-align: right;
+}
+
+.txt-align-left {
+	text-align: left;
+}
+
+.txt-align-center {
+	text-align: center;
+}
+
+.float-right {
+	right: 0;
+}
+
+
+.text-black {
+	color: var(--black);
+}
+
+
+.margin-bottom-1 {
+	margin-bottom: .9rem;
+}
+
+
+.right-0 {
+	right: 0;
+}
+
+.left-0 {
+	left: 0;
+}
+
+
+.d-block {
+	display: block;
+}
+
+
+.d-none {
+	display: none;
+}
+
+
+.p-fixed {
+	position: fixed;
+	width: 100%;
+	z-index: 20;
+}

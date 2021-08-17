@@ -1,0 +1,59 @@
+
+@import './../settings/colors';
+@import './../tools/mixins';
+@import './../tools/flexbox';
+
+
+/*
+===================================
+	Free Shipping &&  Special Offer
+======================================
+*/
+
+@include tablet {
+
+	.c-free-shipping,
+	.c-special-offer {
+		@include flex(row, flex-start, center, .4rem);
+		font-weight: 200;
+
+		svg[class] {
+			color: var(--color-tertiary);
+			width: 2rem;
+			height: 2rem;
+
+			&:hover {
+				color: var(--white);
+			}
+		}
+
+		&:hover {
+			& svg[class] {
+				color: var(--white);
+			}
+		}
+	}
+
+	.c-free-shipping {
+		margin-bottom: .5rem;
+	}
+
+}
+
+
+//Computer Styles
+@include computer {
+
+	.c-free-shipping {
+		margin-bottom: 0;
+		padding-right: 1rem;
+	}
+
+	.c-special-offer {
+		padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, .1);
+	}
+
+}
+
+

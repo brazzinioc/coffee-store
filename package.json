@@ -1,0 +1,37 @@
+{
+  "name": "coffee-store",
+  "version": "1.0.0",
+  "description": "A simple coffee store",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp"
+  },
+  "keywords": [
+    "Coffee",
+    "Shop"
+  ],
+  "author": "Brazzini OC",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.7",
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
+    "sass": "^1.36.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "bootstrap-icons": "^1.5.0"
+  }
+}

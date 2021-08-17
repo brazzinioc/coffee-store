@@ -1,0 +1,51 @@
+
+@import './../tools/flexbox';
+
+
+//Search Engine Products
+.c-search-product {
+	@include flex(row, space-between, stretch);
+
+	input {
+		display: block;
+		width: 85%;
+		height: inherit;
+		padding: .8rem;
+		border-top-left-radius: .2rem;
+		border-bottom-left-radius: .2rem;
+		background-color: rgba(255,255,255,.1);
+		color: rgba(255, 255, 255,.5);
+		font-size: .8rem;
+
+		&::placeholder {
+			font-size: .7rem;
+			opacity: .5;
+		}
+	}
+
+	button {
+		display: block;
+		width: 15%;
+		height: inherit;
+		background-color: rgba(255, 255, 255,.1);
+		border-top-right-radius: .2rem;
+		border-bottom-right-radius: .2rem;
+		transition: background .2s ease-in-out;
+
+		&:hover {
+			background-color: rgba(255, 255, 255,.2);	
+		}
+
+		&:active {
+			background-color: var(--color-tertiary);
+		}
+
+	}
+
+	svg[class] {
+		width: 1rem;
+		height: 1rem;
+		display: block;
+		margin: 0 auto;
+	}
+}
