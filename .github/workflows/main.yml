@@ -24,7 +24,7 @@ jobs:
       run: npm run build
 
     - name: Remove map files
-      run: rm -rf ./public/assets/css/*.map ./public/assets/js/*.map ./public/assets/img/*.png
+      run: rm -rf ./public/assets/css/*.map ./public/assets/js/*.map ./public/assets/img/*.png ./public/assets/img/*.jpg
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
