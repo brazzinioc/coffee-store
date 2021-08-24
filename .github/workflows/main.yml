@@ -31,4 +31,4 @@ jobs:
         aws-region: ${{ secrets.AWS_BUCKET_REGION }}
 
     - name: Upload statics to S3 bucket
-      run: aws s3 sync index.html ${{ secrets.AWS_BUCKET_NAME }} --delete
+      run: aws s3 sync ./assets/ ${{ secrets.AWS_BUCKET_NAME }} --delete
