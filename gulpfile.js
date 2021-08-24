@@ -34,7 +34,7 @@ function buildStyles() {
 		.pipe( sass() )
 		.pipe( postcss( [ autoprefixer(), cssnano() ] ) ) //transform css with autoprefixer
 		.pipe( sourcemaps.write('.') )
-		.pipe(gulp.dest('./assets/css')); //output
+		.pipe(gulp.dest('./public/assets/css')); //output
 }
 
 //Task 2 | JS
@@ -45,7 +45,7 @@ function buildJavaScript() {
 		.pipe( terser() )
 		.pipe( sourcemaps.write('.') )
 		.pipe( rename({ suffix: '.min'}) )
-		.pipe(gulp.dest('./assets/js'));
+		.pipe(gulp.dest('./public/assets/js'));
 }
 
 //Task 3 | Minify Images
@@ -53,7 +53,7 @@ function minifyImages() {
 	return gulp
 		.src(paths.images) //find all images extension
 		.pipe( imageMin() )
-		.pipe(gulp.dest('./assets/img'))
+		.pipe(gulp.dest('./public/assets/img'))
 		.pipe(notify({ message: "Image minified" }));
 }
 
@@ -63,7 +63,7 @@ function convertImagesToWebp() {
 	return gulp
 		.src(paths.images) //find all images extension
 		.pipe( webp() )
-		.pipe(gulp.dest('./assets/img'))
+		.pipe(gulp.dest('./public/assets/img'))
 		.pipe(notify({ message: "Image coverted to webp" }));
 }
 
